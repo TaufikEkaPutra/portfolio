@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio of Taufik Eka Putra</title>
+    <link rel="stylesheet" href="css/final.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
+    <style>
+
+        @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+        }
+
+        .centered-image {
+        display: block;
+        margin: 80px auto;
+        margin-bottom: 0;
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+        }
+
+        .container {
+            padding-top: 0;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            font-size: 20px;
+            color: #ffffff;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-icons a:hover {
+            color: #00bcd4;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .centered-image:hover {
+        transform: translateY(-400px);
+        }
+
+    </style>
+</head>
+
+<body class="bg-gray-100 font-serif">
+
+<!-- Navigation Bar -->
+<nav class="bg-cyan-950 text-white p-4 fixed top-0 w-full z-50">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-xl font-semibold">Taufik Eka Putra</a>
+        <div class="md:hidden">
+            <button id="mobileMenuButton" class="text-white">
+                <!-- SVG code from Feather Icons -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <ul id="menuList" class="hidden md:flex md:space-x-4 md:items-center">
+            <li><a href="#Home" class="text-white hover:text-cyan-700">Home</a></li>
+            <li><a href="#AboutMe" class="text-white hover:text-cyan-700">About Me</a></li>
+            <li><a href="#Contact" class="text-white hover:text-cyan-700">Contact</a></li>
+            <li><a href="#Projects" class="text-white hover:text-cyan-700">Projects</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden md:hidden fixed top-14 left-0 w-full max-h-screen bg-cyan-800 bg-opacity-80 transition-opacity duration-300 ease-in-out overflow-y-auto" onclick="mobileMenu.classList.add('hidden')">
+    <div class="container mx-auto py-4">
+        <ul class="md:flex md:flex-col md:space-y-4 text-center text-white">
+            <li><a href="#Home" class="block mt-8 py-2 hover:scale-110">Home</a></li>
+            <li><a href="#AboutMe" class="block py-2 hover:scale-110">About Me</a></li>
+            <li><a href="#Contact" class="block py-2 hover:scale-110">Contact</a></li>
+            <li><a href="#Projects" class="block py-2 hover:scale-110">Projects</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Profile Photo -->
+<div id="Home" class="centered-image md:w-full p-4 max-w-[66vw] flex items-center justify-center mb-8 mt-8 hover:scale-105 transition duration-200 ease-in-out">
+    <img src="img/prf/profile03.png" alt="Taufik Eka Putra's Profile Image" class="rounded-full w-full h-auto md:w-auto md:h-auto shadow-md border-solid border-4 border-cyan-950">
+</div>
+
+<!-- Content -->
+    <!-- Main Content -->
+    <div id="AboutMe" class="container mx-auto p-4 md:flex mt-8">
+        <div class="md:w-auto p-4 bg-gradient-to-br from-cyan-800 to-cyan-950 shadow-md rounded-lg text-white">
+
+            <h1 class="text-4xl font-semibold mb-4">Welcome to My Portfolio</h1>
+
+                <p class="text-lg text-justify">I'm <span class="font-bold">Taufik Eka Putra</span>, a multimedia crew from Al Basyariyah Multimedia Centre with a focus on content creator and cameraman. I have a strong interest in things related to multimedia. I've been involved in multimedia since my high school years. I've also worked as a freelance multimedia professional, serving as a crew member to support Event Organizers in executing various events for companies, universities, ministries, and more. I am enthusiastic about learning new things and I am dedicated and responsible in my work. Additionally, I am capable of working effectively in a team.</p>
+
+        </div>
+    </div>
+
+    <!-- Description 1 -->
+    <div class="container mx-auto p-4 md:flex pt-20">
+        <div class="md:w-full p-4 bg-white shadow-md rounded-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="column">
+                    <h2 class="text-xl mt-2 font-bold">Education</h2>
+                    <p class="text-lg mt-2 italic">Junior-Senior High School</p>
+                    <p class="text-lg">Al Basyariyah Islamic Boarding School (2009-2016)</p>
+                    <p class="text-lg mt-2 italic">University</p>
+                    <p class="text-lg">Sunan Gunung Djati Islamic State University with a major in Islamic Religious Education (2016-2021)</p>
+                    <p class="text-lg">I hold a Bachelor's degree (S1) and graduated in 2021 with a GPA of 3.67/4.00</p>
+                </div>
+                <div class="column">
+                    <h2 class="text-xl mt-2 font-bold">Skill</h2>
+                    <ol>
+                        <li class="text-lg mt-2">Adobe Photoshop</li>
+                        <li class="text-lg">Adobe Illustrator</li>
+                        <li class="text-lg">Adobe Premiere</li>
+                        <li class="text-lg">Adobe After Effect</li>
+                        <li class="text-lg">Blender 3D</li>
+                        <li class="text-lg">Microsoft Office</li>
+                        <li class="text-lg">Visual Studio Code</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Description 2 -->
+    <div class="container mx-auto p-4 md:flex">
+        <div class="md:w-auto p-4 bg-white shadow-md rounded-lg">
+
+            <h2 class="text-xl mt-2 font-bold">Experience</h2>
+
+                <p class="text-lg mt-2 italic">Part of Al Basyariyah Multimedia Centre</p>
+                <p class="text-lg italic">2021-Now</p>
+
+                <p class="text-lg text-justify mt-2">Al Basyariyah Multimedia Centre is a vendor actively supporting events in the multimedia field, including broadcasting and content creation. I am actively serving as a cameraman, creating various content for event needs, and designing various graphics.</p>
+
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="Contact" class="container mx-auto p-4 md:flex">
+        <div class="md:w-full p-4 bg-white shadow-md rounded-lg">
+
+            <h2 class="text-xl mt-2 font-bold">Contact</h2>
+
+                <p class="text-lg mt-2 italic">E-mail : taufik.eka7697@gmail.com</p>
+                <p class="text-lg mt-2 italic">Phone   : 081212863539</p>
+                <p class="text-lg mt-2 italic">Address : Sukajadi, Bandung, West Java, Indonesia</p>
+
+        </div>
+    </div>
+
+    <!-- Project Cards -->
+    <div id="Projects" class="container mx-auto p-4 md:flex pt-20">
+        <div class="md:w-full p-4 bg-white shadow-md rounded-lg">
+            <p class="text-lg mt-2">Check out some of my projects below:</p>
+
+            <!-- List of The Project Cards -->
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+                <!-- Sample project card (repeat for each project) -->
+                <div class="bg-gradient-to-br from-cyan-800 to-cyan-950 p-4 shadow-md rounded-lg hover:scale-105 transition duration-200 ease-in-out">
+                    <h2 class="text-xl font-semibold mb-2 text-white">Graphic Design</h2>
+                    <p class="text-white">Click the link below to see various graphic designs that I have created.</p>
+                    <a href="https://drive.google.com/drive/folders/18GD2LldsroQQ7WyL53jQMZy2qnB2ziZ1?usp=sharing" class="mt-2 hover:underline">View Project</a>
+                </div>
+                <div class="bg-gradient-to-br from-cyan-500 to-cyan-700 p-4 shadow-md rounded-lg hover:scale-105 transition duration-200 ease-in-out">
+                    <h2 class="text-xl font-semibold mb-2 text-white">Video Project</h2>
+                    <p class="text-white">Click the link below to view various video projects that I have created, whether for event purposes or personal projects.</p>
+                    <a href="https://drive.google.com/drive/folders/13HVAANOcRCr2Ml4seEfrBNwRGPEbinDS?usp=sharing" class="mt-2 hover:underline">View Project</a>
+                </div>
+                <div class="bg-gradient-to-br from-orange-300 to-orange-400 p-4 shadow-md rounded-lg hover:scale-105 transition duration-200 ease-in-out">
+                    <h2 class="text-xl font-semibold mb-2 text-white">Photography</h2>
+                    <p class="text-white">Photography is one of my hobbies. Click the link below to see the photographs I have taken.</p>
+                    <a href="https://drive.google.com/drive/folders/1Fs0WcSqr55WxYEmQayBeME_AGEA5rO-S?usp=sharing" class="mt-2 hover:underline">View Project</a>
+                </div>
+                <div class="bg-gradient-to-br from-orange-700 to-red-400 p-4 shadow-md rounded-lg hover:scale-105 transition duration-200 ease-in-out">
+                    <h2 class="text-xl font-semibold mb-2 text-white">Videography</h2>
+                    <p class="text-white">I have a strong passion for cinematography and have served as a videographer several times in the production of video clips and short movies. Click the link below to see various footage I have captured.</p>
+                    <a href="https://drive.google.com/drive/folders/17N-uTT6ZpbiGcrnX3b7scnERfkPEJYIn?usp=sharing" class="mt-2 hover:underline">View Project</a>
+                </div>
+                <div class="bg-gradient-to-br from-red-800 to-red-950 p-4 shadow-md rounded-lg hover:scale-105 transition duration-200 ease-in-out">
+                    <h2 class="text-xl font-semibold mb-2 text-white">3D Project</h2>
+                    <p class="text-white">I have an interest in 3D production. Click the link below to see some of the 3D projects I've created.</p>
+                    <a href="https://drive.google.com/drive/folders/1cWJD8AdPOOimRzHklS2q-uFxqHtFcEIb?usp=sharing" class="mt-2 hover:underline">View Project</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-cyan-950 text-white p-4 mt-8">
+        <div class="container mx-auto footer-container">
+            <p>&copy; 2024 Taufik Eka Putra. All rights reserved.</p>
+            <div class="social-icons p-4">
+                <a href="#" class="text-white hover:text-cyan-700"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.tiktok.com/@taufik.eka7" class="text-white hover:text-cyan-700"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/taufik_eka/" class="text-white hover:text-cyan-700"><i class="fab fa-instagram"></i></a>
+                <!-- Tambahkan ikon-ikon sosial media lainnya sesuai kebutuhan -->
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- JavaScript (for responsive navigation) -->
+    <script>
+
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+    
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Menambahkan event listener untuk mengaktifkan efek scroll setelah menekan menu navbar
+        menuList.addEventListener('click', (event) => {
+        event.preventDefault();
+    
+        // Ambil target href dari menu yang ditekan
+        const targetId = event.target.getAttribute('href').substring(1);
+    
+        // Cari elemen target
+        const targetElement = document.getElementById(targetId);
+
+        // Atur nilai offset sesuai kebutuhan
+        const offset = 80;
+
+        // Atur posisi scroll ke elemen target dengan offset
+        window.scrollTo({
+            top: targetElement.offsetTop - offset,
+            behavior: 'smooth'
+            });
+        });
+
+    </script>
+    
+</body>
+
+</html>
