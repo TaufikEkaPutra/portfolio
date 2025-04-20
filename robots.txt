@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://taufikekaputra.github.io/sitemap.xml
+Sitemap: https://taufikekaputra.github.io/portfolio/sitemap.xml
