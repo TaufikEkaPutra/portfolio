@@ -1,0 +1,221 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333;
+  --header-bg: linear-gradient(to right, #e0f0ff, #ffffff);
+  --card-bg: #f0faff;
+  --accent-color: #005f8e;
+  --link-color: #007bff;
+  --footer-bg: #eaf6ff;
+}
+
+html:has(#modeToggle:checked) {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --header-bg: linear-gradient(
+    to right,
+    #0a3d62,
+    #1e2a38
+  ); /* NUANSA BIRU DI DARK MODE */
+  --card-bg: #1f1f1f;
+  --accent-color: #66d9ff;
+  --link-color: #66ccff;
+  --footer-bg: #1a1a1a;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  background: var(--header-bg);
+  padding: 60px 20px 20px;
+  text-align: center;
+}
+
+.mode-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.mode-switch label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.mode-switch input {
+  margin-right: 8px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.8em;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.profile-pic {
+  margin-top: 20px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffe0; /* Menggunakan warna kuning cerah keputihan untuk border */
+  position: relative;
+  animation: glow-animation 1.5s infinite alternate;
+}
+
+@keyframes glow-animation {
+  0% {
+    box-shadow: 0 0 10px 4px rgba(255, 255, 224, 0.4),
+      0 0 15px 8px rgba(255, 255, 224, 0.2);
+  }
+
+  100% {
+    box-shadow: 0 0 30px 12px rgba(255, 255, 224, 1),
+      0 0 35px 16px rgba(255, 255, 224, 0.5);
+  }
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  color: var(--accent-color);
+}
+
+.projects,
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project,
+.gallery-item {
+  width: 100%;
+  max-width: 450px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s;
+}
+
+.projects a,
+.gallery a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.projects img,
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.services ul,
+.cv ul {
+  padding-left: 20px;
+}
+
+.contact a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: var(--footer-bg);
+  font-size: 0.9em;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 1.4em;
+  color: var(--accent-color);
+}
+
+.scrolling-gallery {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 20px;
+}
+
+.scrolling-gallery img {
+  height: 150px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.project,
+.gallery-item {
+  width: 100%;
+  max-width: 450px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.project:hover,
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 191, 255, 0.1); /* efek kebiruan saat hover */
+}
+
+/* Justify semua teks paragraf di luar header dan footer */
+body p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* Justify semua list (ul dan li) di luar header dan footer */
+body ul,
+body ol {
+  text-align: justify;
+}
+
+/* Pastikan header dan footer tetap terpusat */
+header,
+footer {
+  text-align: center; /* Menjaga teks tetap di tengah */
+}
+
+/* Pastikan list di dalam header dan footer tetap terpusat */
+header ul,
+header ol,
+footer ul,
+footer ol {
+  text-align: center;
+}
+
+/* Pastikan teks dan list di dalam header/footer tetap rata kiri jika perlu */
+header p,
+footer p {
+  text-align: center; /* Teks di header dan footer tetap di tengah */
+}
+
+header ul,
+header ol,
+footer ul,
+footer ol {
+  text-align: center; /* List tetap di tengah */
+}
