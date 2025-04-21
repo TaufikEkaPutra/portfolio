@@ -23,11 +23,12 @@
 <body>
   <header>
     <div class="mode-switch">
-      <label>
-        <input type="checkbox" id="modeToggle">
-        Dark Mode
+      <label class="switch">
+        <span id="modeLabel" class="mode-label">Light Mode</span>
+        <input type="checkbox" id="modeToggle" />
+        <span class="slider"></span>
       </label>
-    </div>
+    </div>    
     <h1>Portofolio Konten Kreator, Editor Video, & Desainer Grafis</h1>
     <p>Membantu brand dan individu menyampaikan pesan melalui visual yang menarik dan bermakna.</p>
     <img src="assets\img\profile-pic-01.JPG" alt="Foto Profil" class="profile-pic">
@@ -131,5 +132,21 @@
     </div>
     <p>&copy; 2025 Portofolio Saya. Dibuat dengan semangat dan profesionalisme.</p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById("modeToggle");
+    const label = document.getElementById("modeLabel");
+  
+    function updateModeLabel() {
+      label.textContent = toggle.checked ? "Dark Mode" : "Light Mode";
+    }
+  
+    // Update saat halaman dimuat (misalnya user reload)
+    updateModeLabel();
+  
+    // Update saat user mengganti toggle
+    toggle.addEventListener("change", updateModeLabel);
+  </script>
+
 </body>
 </html>
