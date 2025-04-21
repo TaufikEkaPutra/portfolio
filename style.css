@@ -53,9 +53,78 @@ header {
   margin-right: 8px;
 }
 
+/* Container switch dengan label di samping */
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* jarak antara label dan toggle */
+  font-size: 0.9em;
+  position: relative;
+}
+
+/* Slider toggle analog */
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  background-color: #ccc;
+  border-radius: 26px;
+  transition: background-color 0.4s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: transform 0.4s;
+  border-radius: 50%;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.switch input:checked + .slider {
+  background-color: #66ccff;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+/* Label berubah sesuai status toggle */
+#modeToggle:not(:checked) ~ .mode-label::before {
+  content: "Light Mode";
+}
+
+#modeToggle:checked ~ .mode-label::before {
+  content: "Dark Mode";
+}
+
+/* Perbaiki urutan elemen agar label tetap muncul */
+.mode-label {
+  order: -1;
+  white-space: nowrap;
+  color: var(--text-color);
+}
+
 header h1 {
   margin: 0;
   font-size: 2.8em;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2em; /* Atur ke ukuran yang lebih kecil dari default (2.8em) */
+  }
 }
 
 header p {
