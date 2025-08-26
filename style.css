@@ -201,6 +201,13 @@ h2 {
   padding-left: 20px;
 }
 
+.scrolling-gallery img {
+  aspect-ratio: 5 / 4;
+  object-fit: cover;  /* biar gambar gak gepeng */
+  width: 250px;       /* bisa diubah sesuai kebutuhan */
+  border-radius: 8px;
+}
+
 .contact a {
   color: var(--link-color);
   text-decoration: none;
