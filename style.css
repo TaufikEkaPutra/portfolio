@@ -201,13 +201,6 @@ h2 {
   padding-left: 20px;
 }
 
-.scrolling-gallery img {
-  aspect-ratio: 5 / 4;
-  object-fit: cover;  /* biar gambar gak gepeng */
-  width: 250px;       /* bisa diubah sesuai kebutuhan */
-  border-radius: 8px;
-}
-
 .contact a {
   color: var(--link-color);
   text-decoration: none;
@@ -227,15 +220,17 @@ footer {
 }
 
 .scrolling-gallery {
-  overflow-x: auto;
-  white-space: nowrap;
-  padding-bottom: 20px;
+  display: flex;
+  gap: 10px;           /* jarak antar gambar */
+  overflow-x: auto;    /* supaya bisa geser ke kanan */
+  scroll-behavior: smooth; /* biar halus pas scroll */
 }
 
 .scrolling-gallery img {
-  height: 150px;
-  margin: 10px;
-  border-radius: 10px;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;  /* biar gambar gak gepeng */
+  width: 250px;       /* bisa diubah sesuai kebutuhan */
+  border-radius: 8px;
 }
 
 .project,
